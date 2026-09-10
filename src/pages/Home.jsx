@@ -46,7 +46,7 @@ function Home() {
         </div>
       </section>
 
-      <section id="contacto" className="contact">
+      {/* <section id="contacto" className="contact">
         <h2 className="contact-title">¿Hablamos?</h2>
         <p className="contact-text">
           Escríbenos y cuéntanos en qué podemos ayudarte.
@@ -89,7 +89,8 @@ function Home() {
             <i className="fa-brands fa-youtube" aria-hidden="true"></i>
           </a>
         </div>
-      </section>
+      </section> */}
+      
     </>
   );
 }

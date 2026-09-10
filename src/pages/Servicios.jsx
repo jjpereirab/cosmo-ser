@@ -101,14 +101,16 @@ function Servicios() {
           las raíces de un buen árbol y que cada vez más personas encuentren en
           la tierra un motivo para sembrar.
         </p>
+
         <div className="vision-actions">
-          <Link to="/#contacto" className="btn btn-primary">
+          {/* <Link to="/#contacto" className="btn btn-primary">
             ¿Quieres sumarte?
-          </Link>
+          </Link> */}
           <Link to="/#inicio" className="btn btn-outline">
             Volver al inicio
           </Link>
         </div>
+
       </section>
     </>
   );
