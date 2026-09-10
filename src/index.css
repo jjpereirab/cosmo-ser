@@ -1,0 +1,246 @@
+:root {
+  --verde: #94c13b;
+  --verde-oscuro: #6f9a24;
+  --azul: #1e75b1;
+  --teal: #22a29c;
+  --negro: #000000;
+  --blanco: #ffffff;
+  --gris-claro: #f2f5ec;
+  --gris-texto: #4a4f45;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, "Helvetica Neue", Arial,
+    sans-serif;
+  color: var(--negro);
+  background-color: var(--blanco);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.site {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--blanco);
+  border-bottom: 1px solid var(--gris-claro);
+}
+
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  padding: 1.1rem 1.5rem;
+}
+
+.nav a {
+  color: var(--gris-texto);
+  text-decoration: none;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: var(--verde);
+}
+
+/* ---- Hero ---- */
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 4rem 1.5rem 5rem;
+}
+
+.hero-logo {
+  width: min(320px, 80vw);
+  height: auto;
+  margin-bottom: 2.25rem;
+}
+
+.hero-title {
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.hero-title span {
+  color: var(--verde);
+}
+
+.hero-subtitle {
+  margin-top: 0.9rem;
+  max-width: 34rem;
+  color: var(--gris-texto);
+  font-size: clamp(1rem, 2vw, 1.15rem);
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 2.25rem;
+  padding: 0.85rem 2.3rem;
+  border: none;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.btn-primary {
+  background-color: var(--verde);
+  color: var(--blanco);
+}
+
+.btn-primary:hover {
+  background-color: var(--verde-oscuro);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(111, 154, 36, 0.35);
+}
+
+/* ---- About ---- */
+
+.about {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 1.5rem 1.5rem 5rem;
+}
+
+.about-card {
+  background-color: var(--gris-claro);
+  border-radius: 18px;
+  padding: 2.2rem 1.8rem;
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.about-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.08);
+}
+
+.about-icon {
+  font-size: 2rem;
+  color: var(--azul);
+  margin-bottom: 1rem;
+}
+
+.about-card:nth-child(2) .about-icon {
+  color: var(--verde);
+}
+
+.about-card:nth-child(3) .about-icon {
+  color: var(--teal);
+}
+
+.about-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.6rem;
+  font-weight: 700;
+}
+
+.about-card p {
+  font-size: 0.95rem;
+  color: var(--gris-texto);
+}
+
+/* ---- Contact / Social ---- */
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 2.5rem 1.5rem 6rem;
+}
+
+.contact-title {
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+  font-weight: 700;
+}
+
+.contact-text {
+  margin-top: 0.7rem;
+  color: var(--gris-texto);
+  max-width: 30rem;
+}
+
+.social {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-top: 2.25rem;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--blanco);
+  color: var(--verde);
+  border: 2px solid var(--verde);
+  font-size: 1.4rem;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.social-btn:hover {
+  background-color: var(--verde);
+  color: var(--blanco);
+  transform: translateY(-4px);
+}
+
+/* ---- Footer ---- */
+
+.footer {
+  background-color: var(--negro);
+  color: var(--blanco);
+  text-align: center;
+  padding: 1.6rem 1.5rem;
+  font-size: 0.9rem;
+}
+
+/* ---- Responsive ---- */
+
+@media (max-width: 480px) {
+  .nav {
+    gap: 1.5rem;
+  }
+
+  .hero {
+    padding-top: 3rem;
+  }
+}
